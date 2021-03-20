@@ -1,3 +1,7 @@
 .snowpack
 build
 node_modules
+package-lock.json
+.vscode
+.env
+desktop.ini

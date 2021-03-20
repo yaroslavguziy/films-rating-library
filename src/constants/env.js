@@ -1,0 +1,4 @@
+const { SNOWPACK_PUBLIC_API_URL, SNOWPACK_PUBLIC_API_KEY } = import.meta.env;
+
+export const API_URL = SNOWPACK_PUBLIC_API_URL;
+export const API_KEY = SNOWPACK_PUBLIC_API_KEY;

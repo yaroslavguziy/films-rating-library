@@ -1,26 +1,18 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
+    public: '/',
+    src: '/dist',
   },
-  plugins: [
-    /* ... */
-  ],
-  routes: [
-    /* Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
-  ],
-  optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+  routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
+  alias: {
+    '#layouts': './src/layouts',
+    '#components': './src/components',
+    '#translations': './src/translations',
+    '#constants': './src/constants',
+    '#utils': './src/utils',
+    '#api': './src/api',
+    '#hooks': './src/hooks',
   },
-  packageOptions: {
-    /* ... */
-  },
-  devOptions: {
-    /* ... */
-  },
-  buildOptions: {
-    /* ... */
-  },
+  plugins: ['@snowpack/plugin-sass', '@snowpack/plugin-dotenv'],
 };

@@ -1,4 +1,4 @@
-# New Project
+# films-rating-library
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
