@@ -7,7 +7,9 @@ import './styles.scss';
 export const Header = () => {
   return (
     <header className="header">
-      <Nav />
+      <div className="container">
+        <Nav />
+      </div>
     </header>
   );
 };

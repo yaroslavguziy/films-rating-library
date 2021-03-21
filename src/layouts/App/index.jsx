@@ -13,7 +13,7 @@ import { Movies } from '#layouts/Movies/index.jsx';
 import { Movie } from '#layouts/Movie/index.jsx';
 import { ROUTES } from '#constants/routes.js';
 
-// import './styles.scss';
+import './styles.scss';
 
 export const App = () => (
   <QueryClientProvider client={queryClient}>
