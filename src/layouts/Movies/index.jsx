@@ -6,10 +6,12 @@ export const Movies = () => {
   const { isLoading, data } = useMoviePopular();
   console.log('data', data);
   return (
-    <ul>
-      {data?.results?.map(entity => (
-        <li key={entity.id}>{entity.title}</li>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {data?.results?.map(entity => (
+          <li key={entity.id}>{entity.title}</li>
+        ))}
+      </ul>
+    </div>
   );
 };
