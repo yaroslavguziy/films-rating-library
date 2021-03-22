@@ -1,28 +1,31 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 
-import { useMoviePopular, useMovieTopRated } from '#hooks/movies.js';
-import { Card } from '#components/Card/index.jsx';
+import { CardList } from '#components/CardList/index.jsx';
+
 import './movies.scss';
 
+const ARRAY = [
+  { category: 'popular', key: 'POPULAR' },
+  { category: 'top_rated', key: 'TOP_RATED' },
+  { category: 'upcoming', key: 'UPCOMING' },
+];
+
 export const Movies = () => {
-  const { isLoading, data } = useMovieTopRated();
-  console.log('data', data);
-  // const { isLoading1, data1 } = useMovieTopRated();
+  const { formatMessage } = useIntl();
   return (
     <div className="container">
       <div className="content">
-        <div className="content__item">
-          <h2 className="content__title">Top Rated</h2>
-          <div className="cards">
-            <ul className="cards__list">
-              {data?.results?.map(entity => (
-                <li key={entity.id}>
-                  <Card entity={entity} />
-                </li>
-              ))}
-            </ul>
+        {ARRAY.map(({ category, key }) => (
+          <div className="content__item" key={key}>
+            <h2 className="content__title">
+              {formatMessage({ id: `MOVIES.${key}` })}
+            </h2>
+            <div className="cards">
+              <CardList category={category} group="movie" />
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

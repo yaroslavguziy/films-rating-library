@@ -4,22 +4,22 @@ import { useIntl } from 'react-intl';
 import { CardList } from '#components/CardList/index.jsx';
 
 const ARRAY = [
-  { group: 'tv', category: 'popular', key: 'POPULAR_TV' },
-  { group: 'movie', category: 'popular', key: 'POPULAR_MOVIE' },
+  { category: 'popular', key: 'POPULAR' },
+  { category: 'top_rated', key: 'TOP_RATED' },
 ];
 
-export const Home = () => {
+export const Tv = () => {
   const { formatMessage } = useIntl();
   return (
     <div className="container">
       <div className="content">
-        {ARRAY.map(({ group, category, key }) => (
+        {ARRAY.map(({ category, key }) => (
           <div className="content__item" key={key}>
             <h2 className="content__title">
-              {formatMessage({ id: `HOME.${key}` })}
+              {formatMessage({ id: `TV.${key}` })}
             </h2>
             <div className="cards">
-              <CardList category={category} group={group} />
+              <CardList category={category} group="tv" />
             </div>
           </div>
         ))}

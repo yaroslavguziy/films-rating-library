@@ -1,13 +1,15 @@
 .nav {
-  display: flex;
-  list-style: none;
+  &__list {
+    display: flex;
+  }
   &__link {
-    padding: 0 10px;
-    > a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 20px;
+    transition: all 0.3 linear;
+
+    &:hover {
+      color: rgb(255, 0, 0);
     }
   }
 }

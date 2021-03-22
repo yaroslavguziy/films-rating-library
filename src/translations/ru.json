@@ -2,6 +2,20 @@
   "NAVIGATION": {
     "HOME": "Домой",
     "MOVIES": "Фильмы",
-    "MOVIE": "Фильм"
+    "MOVIE": "Фильм",
+    "TV": "ТВ"
+  },
+  "MOVIES": {
+    "POPULAR": "Популярные",
+    "TOP_RATED": "Топовые",
+    "UPCOMING": "Скоро"
+  },
+  "TV": {
+    "POPULAR": "Популярные",
+    "TOP_RATED": "Топовые"
+  },
+  "HOME": {
+    "POPULAR_TV": "Popular TV",
+    "POPULAR_MOVIE": "Popular Movie"
   }
 }

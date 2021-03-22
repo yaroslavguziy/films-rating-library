@@ -11,6 +11,7 @@ import { queryClient } from '#constants/queryClient.js';
 import { Home } from '#layouts/Home/index.jsx';
 import { Movies } from '#layouts/Movies/index.jsx';
 import { Movie } from '#layouts/Movie/index.jsx';
+import { Tv } from '#layouts/Tv/index.jsx';
 import { ROUTES } from '#constants/routes.js';
 
 import './styles.scss';
@@ -23,6 +24,9 @@ export const App = () => (
         <Switch>
           <Route exact path={ROUTES.HOME}>
             <Home />
+          </Route>
+          <Route exact path={ROUTES.TV}>
+            <Tv />
           </Route>
           <Route exact path={ROUTES.MOVIES}>
             <Movies />

@@ -12,19 +12,31 @@ export const Nav = () => {
 
   return (
     <nav className="nav">
-      <li className="nav__link">
-        <Link to={ROUTES.HOME}>{formatMessage({ id: 'NAVIGATION.HOME' })}</Link>
-      </li>
-      <li className="nav__link">
-        <Link to={ROUTES.MOVIES}>
-          {formatMessage({ id: 'NAVIGATION.MOVIES' })}
-        </Link>
-      </li>
-      <li className="nav__link">
-        <Link to={generatePath(ROUTES.MOVIE, { id: 1 })}>
-          {formatMessage({ id: 'NAVIGATION.MOVIE' })}
-        </Link>
-      </li>
+      <ul className="nav__list">
+        <li className="nav__item">
+          <Link className="nav__link" to={ROUTES.HOME}>
+            {formatMessage({ id: 'NAVIGATION.HOME' })}
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link className="nav__link" to={ROUTES.TV}>
+            {formatMessage({ id: 'NAVIGATION.TV' })}
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link className="nav__link" to={ROUTES.MOVIES}>
+            {formatMessage({ id: 'NAVIGATION.MOVIES' })}
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link
+            className="nav__link"
+            to={generatePath(ROUTES.MOVIE, { id: 1 })}
+          >
+            {formatMessage({ id: 'NAVIGATION.MOVIE' })}
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };
