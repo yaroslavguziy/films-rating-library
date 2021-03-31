@@ -1,22 +1,18 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-import { IMG_URL } from '#constants/env.js';
-
-import './card.scss';
+import { Img } from '#components/Img/index.jsx';
 
 export const Card = ({ entity }) => {
-  const title = entity.name || entity.title;
+  const title = useMemo(() => entity.name || entity.title, [
+    entity.name,
+    entity.title,
+  ]);
+
   return (
     <div className="card">
-      <img
-        className="card__image"
-        src={`${IMG_URL}${entity.poster_path}`}
-        loading="lazy"
-        width="100%"
-        height="100%"
-      />
+      <Img src={entity.poster_path} max-width="232px" max-height="300px" />
       <h3 className="card__title">{title}</h3>
       {entity.release_date ? (
         <span className="card__release-date">

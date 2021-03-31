@@ -17,9 +17,9 @@ export const getMovieImagesAPI = async ({ queryKey }) => {
 };
 
 export const getSearchEntitiesAPI = async ({ queryKey }) => {
-  const [_key, { query, page, group }] = queryKey;
+  const [_key, { query }] = queryKey;
 
   return await fetch(
-    `${API_URL}search/${group}?api_key=${API_KEY}&${page}&${query}`
+    `${API_URL}search/multi?api_key=${API_KEY}&query=${query}`
   ).then(res => res.json());
 };

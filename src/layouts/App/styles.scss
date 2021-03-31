@@ -1,54 +1,17 @@
-// @import '../../components/Nav/styles.scss';
+// RESET, VARS
+@import '../../styles/vars.scss';
+@import '../../styles/reset.scss';
+@import '../../styles/main-content.scss';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// MODULES
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
 
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-body {
-  min-height: 100vh;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.container {
-  max-width: 1260px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
+// COMPONENTS
+@import '../../components/Header/styles.scss';
+@import '../../components/Logo/styles.scss';
+@import '../../components/Nav/styles.scss';
+@import '../../components/Card/styles.scss';
+@import '../../components/List/styles.scss';
+@import '../../components/Img/styles.scss';
+@import '../../components/Search/styles.scss';

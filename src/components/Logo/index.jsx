@@ -1,13 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '#constants/routes.js';
 
-import './style.scss';
-
-export const Logo = () => {
-  return (
-    <div className="logo">
-      <a href="" className="logo__link">
-        Movies Library
-      </a>
-    </div>
-  );
-};
+export const Logo = () => (
+  <div className="logo">
+    <Link className="logo__link" to={ROUTES.HOME}>
+      TV&Movies
+    </Link>
+  </div>
+);

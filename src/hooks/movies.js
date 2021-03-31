@@ -13,5 +13,5 @@ export const useEntities = options => useQuery([KEY, options], getEntitiesAPI);
 export const useMovieImages = options =>
   useQuery([KEY, options], getMovieImagesAPI);
 
-export const useSearchEntities = options =>
-  useQuery([KEY, options], getSearchEntitiesAPI);
+export const useSearchEntities = ({ queryOptions, ...options }) =>
+  useQuery([KEY, options], getSearchEntitiesAPI, queryOptions);
