@@ -2,6 +2,20 @@
   "NAVIGATION": {
     "HOME": "Home",
     "MOVIES": "Movies",
-    "MOVIE": "Movie"
+    "MOVIE": "Movie",
+    "TV": "TV"
+  },
+  "MOVIES": {
+    "POPULAR": "Popular",
+    "TOP_RATED": "Top Rated",
+    "UPCOMING": "Upcoming"
+  },
+  "TV": {
+    "POPULAR": "Popular",
+    "TOP_RATED": "Top Rated"
+  },
+  "HOME": {
+    "POPULAR_TV": "Popular TV",
+    "POPULAR_MOVIE": "Popular Movie"
   }
 }

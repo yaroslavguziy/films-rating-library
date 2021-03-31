@@ -1,4 +1,3 @@
-///https://formatjs.io/docs/react-intl/components
 import 'intl';
 import React, { useMemo } from 'react';
 import { node } from 'prop-types';

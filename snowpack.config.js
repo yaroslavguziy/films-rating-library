@@ -14,5 +14,9 @@ module.exports = {
     '#api': './src/api',
     '#hooks': './src/hooks',
   },
-  plugins: ['@snowpack/plugin-sass', '@snowpack/plugin-dotenv'],
+  plugins: [
+    '@snowpack/plugin-sass',
+    '@snowpack/plugin-dotenv',
+    '@snowpack/plugin-react-refresh',
+  ],
 };

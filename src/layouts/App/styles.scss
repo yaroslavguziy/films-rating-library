@@ -1,1 +1,17 @@
-// @import '../../components/Nav/styles.scss';
+// RESET, VARS
+@import '../../styles/vars.scss';
+@import '../../styles/reset.scss';
+@import '../../styles/main-content.scss';
+
+// MODULES
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+
+// COMPONENTS
+@import '../../components/Header/styles.scss';
+@import '../../components/Logo/styles.scss';
+@import '../../components/Nav/styles.scss';
+@import '../../components/Card/styles.scss';
+@import '../../components/List/styles.scss';
+@import '../../components/Img/styles.scss';
+@import '../../components/Search/styles.scss';
