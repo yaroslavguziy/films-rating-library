@@ -8,9 +8,8 @@ import { Header } from '#components/Header/index.jsx';
 
 import { queryClient } from '#constants/queryClient.js';
 import { Home } from '#layouts/Home/index.jsx';
-import { Movies } from '#layouts/Movies/index.jsx';
-import { Movie } from '#layouts/Movie/index.jsx';
-import { Tv } from '#layouts/Tv/index.jsx';
+import { Entities } from '#layouts/Entities/index.jsx';
+import { Entity } from '#layouts/Entity/index.jsx';
 import { ROUTES } from '#constants/routes.js';
 
 import './styles.scss';
@@ -26,14 +25,11 @@ export const App = () => (
               <Route exact path={ROUTES.HOME}>
                 <Home />
               </Route>
-              <Route exact path={ROUTES.TV}>
-                <Tv />
+              <Route exact path={ROUTES.ENTITIES}>
+                <Entities />
               </Route>
-              <Route exact path={ROUTES.MOVIES}>
-                <Movies />
-              </Route>
-              <Route exact path={ROUTES.MOVIE}>
-                <Movie />
+              <Route exact path={ROUTES.ENTITY}>
+                <Entity />
               </Route>
             </Switch>
           </div>

@@ -1,18 +1,31 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
+import { useParams } from 'react-router-dom';
 
 import { List } from '#components/List/index.jsx';
+import { ENTITY_TYPE } from '#constants/entities.js';
 
-const ARRAY = [
+const TV_ARRAY = [
+  { category: 'top_rated', key: 'TOP_RATED' },
+  { category: 'popular', key: 'POPULAR' },
+];
+
+const MOVIE_ARRAY = [
   { category: 'top_rated', key: 'TOP_RATED' },
   { category: 'popular', key: 'POPULAR' },
   { category: 'upcoming', key: 'UPCOMING' },
 ];
 
-export const Movies = () => {
-  const { formatMessage } = useIntl();
+const MAP_TYPE_TO_ARRAY = {
+  [ENTITY_TYPE.TV]: TV_ARRAY,
+  [ENTITY_TYPE.MOVIE]: MOVIE_ARRAY,
+};
 
-  return ARRAY.map(({ category, key }) => (
+export const Entities = () => {
+  const { formatMessage } = useIntl();
+  const { type } = useParams();
+
+  return MAP_TYPE_TO_ARRAY[type].map(({ category, key }) => (
     <div className="content__item" key={key}>
       <div className="content__header">
         <h2 className="content__title">
@@ -21,7 +34,7 @@ export const Movies = () => {
       </div>
       <div className="content__body">
         <div className="cards">
-          <List category={category} group="movie" />
+          <List category={category} type={type} />
         </div>
       </div>
     </div>

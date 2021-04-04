@@ -3,7 +3,7 @@ import { oneOf, string, oneOfType, any, func, shape, node } from 'prop-types';
 import Slider from 'react-slick';
 
 import { Card } from '#components/Card/index.jsx';
-import { useEntities } from '#hooks/movies.js';
+import { useEntities } from '#hooks/entities.js';
 import { settings } from '#constants/slider.js';
 
 const Wrapper = forwardRef(({ view, children }, ref) =>
@@ -21,14 +21,14 @@ Wrapper.propTypes = {
   view: oneOf(['card', 'list', 'carousel']),
 };
 
-export const List = forwardRef(({ group, category, view }, ref) => {
-  const { data } = useEntities({ group, category });
+export const List = forwardRef(({ type, category, view }, ref) => {
+  const { data } = useEntities({ type, category });
 
   return (
     <Wrapper view={view} ref={ref}>
       {data?.results?.map(entity => (
-        <li key={entity.id}>
-          <Card entity={entity} view={view} />
+        <li className="cards__item" key={entity.id}>
+          <Card entity={entity} view={view} type={type} />
         </li>
       ))}
     </Wrapper>
@@ -36,7 +36,7 @@ export const List = forwardRef(({ group, category, view }, ref) => {
 });
 
 List.propTypes = {
-  group: string,
+  type: oneOf(['tv', 'movie', 'person']),
   category: string,
   view: oneOf(['card', 'list', 'carousel']),
 };

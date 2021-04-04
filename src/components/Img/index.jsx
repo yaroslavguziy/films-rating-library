@@ -1,16 +1,19 @@
 import React, { useState, useMemo } from 'react';
 import { string } from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import { IMG_URL } from '#constants/env.js';
 
 export const Img = ({ src, width, height, className }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const imgSrc = useMemo(() => `${IMG_URL}${src}`, [src]);
 
-  const loadingClass = useMemo(() => `${isLoading ? ' img__loading' : ''}`, [
-    isLoading,
-  ]);
+  const loadingClass = useMemo(
+    () => `${isLoading ? ' img__loading-active' : ''}`,
+    [isLoading]
+  );
 
   const internalClass = useMemo(() => `${className ? ' ' + className : ''}`, [
     className,
@@ -19,14 +22,20 @@ export const Img = ({ src, width, height, className }) => {
   const handleOnLoad = () => setIsLoading(false);
 
   return (
-    <img
-      src={imgSrc}
-      width={width}
-      height={height}
-      onLoad={handleOnLoad}
-      loading="lazy"
-      className={`card__img${loadingClass}${internalClass}`}
-    />
+    <div className={`img`} width={width} height={height}>
+      <img
+        src={imgSrc}
+        width={width}
+        height={height}
+        onLoad={handleOnLoad}
+        loading="lazy"
+        className={`img__inner${loadingClass}${internalClass}`}
+      />
+      <FontAwesomeIcon
+        icon={faSpinner}
+        className={`img__loading${loadingClass}`}
+      />
+    </div>
   );
 };
 

@@ -17,5 +17,9 @@
   "HOME": {
     "POPULAR_TV": "Popular TV",
     "POPULAR_MOVIE": "Popular Movie"
+  },
+  "CARD": {
+    "RELEASE": "Release: {release}",
+    "VOTES": "Votes: {vote}"
   }
 }

@@ -1,17 +1,17 @@
 import { useQuery } from 'react-query';
 
 import {
-  getMovieImagesAPI,
   getEntitiesAPI,
   getSearchEntitiesAPI,
-} from '#api/movies.js';
+  getEntityAPI,
+} from '#api/entities.js';
 
-const KEY = 'movies';
+const KEY = 'entities';
 
 export const useEntities = options => useQuery([KEY, options], getEntitiesAPI);
 
-export const useMovieImages = options =>
-  useQuery([KEY, options], getMovieImagesAPI);
-
 export const useSearchEntities = ({ queryOptions, ...options }) =>
   useQuery([KEY, options], getSearchEntitiesAPI, queryOptions);
+
+export const useEntity = ({ queryOptions, ...options }) =>
+  useQuery([KEY, options], getEntityAPI, queryOptions);

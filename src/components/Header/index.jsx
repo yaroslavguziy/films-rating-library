@@ -5,25 +5,19 @@ import { Search } from '#components/Search/index.jsx';
 import { Logo } from '#components/Logo/index.jsx';
 
 export const Header = () => {
-  const [navOpen, setNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const openNav = () => {
-    setNavOpen(!navOpen);
-  };
-
-  const closeNav = () => {
-    setNavOpen(false);
-  };
+  const handleNavOpen = () => setIsNavOpen(!isNavOpen);
 
   return (
     <header className="header">
       <div className="header__wrapper">
         <Logo />
-        <Nav navOpen={navOpen} closeNav={closeNav} />
+        <Nav handleNavOpen={handleNavOpen} isNavOpen={isNavOpen} />
         <Search />
         <div
-          className={`header__burger ${navOpen ? 'active' : ''}`}
-          onClick={openNav}
+          className={`header__burger ${isNavOpen ? 'active' : ''}`}
+          onClick={handleNavOpen}
         >
           <span></span>
         </div>

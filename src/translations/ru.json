@@ -17,5 +17,9 @@
   "HOME": {
     "POPULAR_TV": "Популярное ТВ",
     "POPULAR_MOVIE": "Популярное Кино"
+  },
+  "CARD": {
+    "RELEASE": "Release: {release}",
+    "VOTES": "Votes: {vote}"
   }
 }

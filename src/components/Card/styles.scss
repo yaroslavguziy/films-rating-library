@@ -1,4 +1,15 @@
 .card {
+  display: flex;
+  outline: none;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  &-column {
+    flex-direction: column;
+  }
+  &-row {
+    flex-direction: row;
+  }
   &__title {
     margin-top: 10px;
     @media (max-width: 475px) {
@@ -50,34 +61,17 @@
   }
 }
 
-.slick-active {
-  padding: 0 7px;
-  box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    padding: 0 4px;
-  }
+.slick-slide.slick-active > div {
+  margin-right: 10px;
+}
+.slick-list {
+  margin-right: -10px;
 }
 
 .slick-active {
-  // @media (max-width: 768px) {
-  //   margin-right: 10px;
-  // }
-  // @media (max-width: 475px) {
-  //   margin-right: 5px;
-  // }
-
   .card {
-    @media (max-width: 885px) {
+    @media (max-width: 786px) {
       font-size: 12px;
-    }
-    @media (max-width: 768px) {
-      // &__release-date {
-      //   display: none;
-      // }
-      // &__vote {
-      //   margin-top: 5px;
-      // }
     }
   }
 }
