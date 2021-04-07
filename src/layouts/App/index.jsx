@@ -10,6 +10,7 @@ import { queryClient } from '#constants/queryClient.js';
 import { Home } from '#layouts/Home/index.jsx';
 import { Entities } from '#layouts/Entities/index.jsx';
 import { Entity } from '#layouts/Entity/index.jsx';
+import { Categories } from '#layouts/Categories/index.jsx';
 import { ROUTES } from '#constants/routes.js';
 
 import './styles.scss';
@@ -30,6 +31,9 @@ export const App = () => (
               </Route>
               <Route exact path={ROUTES.ENTITY}>
                 <Entity />
+              </Route>
+              <Route exact path={ROUTES.ENTITIES_CATEGORIES}>
+                <Categories />
               </Route>
             </Switch>
           </div>

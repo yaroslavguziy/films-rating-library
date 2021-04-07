@@ -8,7 +8,7 @@ import { IMG_URL } from '#constants/env.js';
 export const Img = ({ src, width, height, className }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const imgSrc = useMemo(() => `${IMG_URL}${src}`, [src]);
+  const imgSrc = useMemo(() => (src ? `${IMG_URL}${src}` : ''), [src]);
 
   const loadingClass = useMemo(
     () => `${isLoading ? ' img__loading-active' : ''}`,

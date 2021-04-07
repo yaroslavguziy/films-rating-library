@@ -63,7 +63,7 @@ export const Search = () => {
                       release_date,
                       first_air_date,
                     }}
-                    width="50px"
+                    width="60px"
                     height="70px"
                     direction="row"
                     handleClick={handleClick}
