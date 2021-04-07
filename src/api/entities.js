@@ -1,10 +1,10 @@
 import { API_URL, API_KEY } from '#constants/env.js';
 
-export const getEntitiesAPI = async ({ queryKey }) => {
+export const getEntitiesAPI = async ({ queryKey, pageParam = 1 }) => {
   const [_key, { type, category }] = queryKey;
 
   return await fetch(
-    `${API_URL}${type}/${category}?api_key=${API_KEY}`
+    `${API_URL}${type}/${category}?api_key=${API_KEY}&page=${pageParam}`
   ).then(res => res.json());
 };
 
@@ -22,4 +22,12 @@ export const getEntityAPI = async ({ queryKey }) => {
   return await fetch(`${API_URL}${type}/${id}?api_key=${API_KEY}`).then(res =>
     res.json()
   );
+};
+
+export const getEntitySimilarAPI = async ({ queryKey }) => {
+  const [_key, { type, id }] = queryKey;
+
+  return await fetch(
+    `${API_URL}${type}/${id}/similar?api_key=${API_KEY}`
+  ).then(res => res.json());
 };

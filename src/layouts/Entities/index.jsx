@@ -1,9 +1,10 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, generatePath } from 'react-router-dom';
 
 import { List } from '#components/List/index.jsx';
 import { ENTITY_TYPE } from '#constants/entities.js';
+import { ROUTES } from '#constants/routes.js';
 
 const TV_ARRAY = [
   { category: 'top_rated', key: 'TOP_RATED' },
@@ -28,9 +29,15 @@ export const Entities = () => {
   return MAP_TYPE_TO_ARRAY[type].map(({ category, key }) => (
     <div className="content__item" key={key}>
       <div className="content__header">
-        <h2 className="content__title">
-          {formatMessage({ id: `MOVIES.${key}` })}
-        </h2>
+        <Link
+          className="content__title"
+          to={generatePath(ROUTES.ENTITIES_CATEGORIES, {
+            type,
+            category,
+          })}
+        >
+          <h2>{formatMessage({ id: `MOVIES.${key}` })}</h2>
+        </Link>
       </div>
       <div className="content__body">
         <div className="cards">

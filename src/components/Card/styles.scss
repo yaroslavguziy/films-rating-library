@@ -1,15 +1,21 @@
 .card {
   display: flex;
   outline: none;
-  background-color: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  background-color: transparent;
   &-column {
     flex-direction: column;
   }
   &-row {
     flex-direction: row;
   }
+  &__info {
+    text-align: left;
+    width: 100%;
+  }
+
   &__title {
     margin-top: 10px;
     @media (max-width: 475px) {
@@ -24,10 +30,6 @@
     @media (max-width: 425px) {
       margin-top: 5px;
     }
-  }
-
-  &__img {
-    background-color: gray;
   }
 
   &__ratings {
@@ -63,9 +65,15 @@
 
 .slick-slide.slick-active > div {
   margin-right: 10px;
+  @media (max-width: 768px) {
+    margin-right: 7px;
+  }
 }
 .slick-list {
   margin-right: -10px;
+  @media (max-width: 768px) {
+    margin-top: -7px;
+  }
 }
 
 .slick-active {
