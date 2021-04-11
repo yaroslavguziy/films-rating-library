@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/yaroslavguziy/films-rating-library/issues"
   },
-  "homepage": "https://github.com/yaroslavguziy/films-rating-library#readme",
+  "homepage": "/films-rating-library",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
