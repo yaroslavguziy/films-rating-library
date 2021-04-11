@@ -10,6 +10,7 @@ import {Entities} from "../Entities/index.js";
 import {Entity} from "../Entity/index.js";
 import {Categories} from "../Categories/index.js";
 import {ROUTES} from "../../constants/routes.js";
+import "./styles.css.proxy.js";
 export const App = () => /* @__PURE__ */ React.createElement(QueryClientProvider, {
   client: queryClient
 }, /* @__PURE__ */ React.createElement(IntlProvider, null, /* @__PURE__ */ React.createElement(BrowserRouter, null, /* @__PURE__ */ React.createElement(Header, null), /* @__PURE__ */ React.createElement("main", {
