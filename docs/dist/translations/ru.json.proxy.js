@@ -1,0 +1,2 @@
+let json = {"NAVIGATION":{"HOME":"Домой","MOVIES":"Фильмы","MOVIE":"Фильм","TV":"ТВ"},"MOVIE":{"POPULAR":"Популярные","TOP_RATED":"Топовые","UPCOMING":"Скоро"},"TV":{"POPULAR":"Популярные","TOP_RATED":"Топовые"},"HOME":{"POPULAR_TV":"Популярное ТВ","POPULAR_MOVIE":"Популярное Кино"},"CARD":{"RELEASE":"Релиз: {release}","VOTES":"Голоса: {vote}"}};
+export default json;

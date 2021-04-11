@@ -38,7 +38,7 @@ export const Entity = () => {
       </div>
       <div className="similar">
         <div className="similar__header">
-          <h3 className="similar__title">Similar</h3>
+          <h2 className="similar__title">Similar</h2>
           <div className="arrows">
             <button
               className="arrow arrow__left"

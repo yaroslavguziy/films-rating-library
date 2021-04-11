@@ -19,4 +19,7 @@ module.exports = {
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-react-refresh',
   ],
+  buildOptions: {
+    out: 'docs',
+  },
 };

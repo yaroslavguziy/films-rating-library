@@ -1,0 +1,11 @@
+import * as __SNOWPACK_ENV__ from '../../_snowpack/env.js';
+
+const {
+  SNOWPACK_PUBLIC_API_URL,
+  SNOWPACK_PUBLIC_API_KEY,
+  SNOWPACK_PUBLIC_IMG_URL,
+} = __SNOWPACK_ENV__;
+
+export const API_URL = SNOWPACK_PUBLIC_API_URL;
+export const API_KEY = SNOWPACK_PUBLIC_API_KEY;
+export const IMG_URL = SNOWPACK_PUBLIC_IMG_URL;

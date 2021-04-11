@@ -4,7 +4,7 @@ import { node } from 'prop-types';
 import { IntlProvider as NativeIntlProvider } from 'react-intl';
 
 import { flattenMessages } from '#utils/flattenMessages.js';
-import { EN } from '#constants/languages.js';
+import { EN, RU } from '#constants/languages.js';
 import en from '#translations/en.json';
 import ru from '#translations/ru.json';
 

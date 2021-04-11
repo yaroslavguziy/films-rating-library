@@ -1,0 +1,21 @@
+.logo {
+  z-index: 4;
+}
+.logo__link {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  .logo__link {
+    font-size: 16px;
+    letter-spacing: 1;
+  }
+}
+@media (max-width: 475px) {
+  .logo__link {
+    font-size: 14px;
+  }
+}

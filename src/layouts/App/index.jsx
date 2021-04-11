@@ -13,7 +13,7 @@ import { Entity } from '#layouts/Entity/index.jsx';
 import { Categories } from '#layouts/Categories/index.jsx';
 import { ROUTES } from '#constants/routes.js';
 
-import './styles.scss';
+// import './styles.scss';
 
 export const App = () => (
   <QueryClientProvider client={queryClient}>

@@ -1,0 +1,87 @@
+.card {
+  display: flex;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+.card-column {
+  flex-direction: column;
+}
+.card-row {
+  flex-direction: row;
+}
+.card__info {
+  text-align: left;
+  width: 100%;
+}
+.card__title {
+  margin-top: 10px;
+}
+@media (max-width: 475px) {
+  .card__title {
+    font-size: 12px;
+  }
+}
+.card__release-date {
+  display: inline-block;
+  margin-top: 10px;
+}
+@media (max-width: 425px) {
+  .card__release-date {
+    margin-top: 5px;
+  }
+}
+.card__ratings {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 425px) {
+  .card__ratings {
+    margin-top: 5px;
+  }
+}
+.card__stars {
+  display: flex;
+  align-items: center;
+}
+.card__rating {
+  margin-left: 5px;
+}
+@media (max-width: 375px) {
+  .card__vote {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    font-size: 12px;
+  }
+}
+
+.slick-slide.slick-active > div {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .slick-slide.slick-active > div {
+    margin-right: 7px;
+  }
+}
+
+.slick-list {
+  margin-right: -10px;
+}
+@media (max-width: 768px) {
+  .slick-list {
+    margin-top: -7px;
+  }
+}
+
+@media (max-width: 786px) {
+  .slick-active .card {
+    font-size: 12px;
+  }
+}
