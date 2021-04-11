@@ -21,5 +21,6 @@ module.exports = {
   ],
   buildOptions: {
     out: 'docs',
+    baseUrl: '/films-rating-library',
   },
 };
