@@ -32,7 +32,7 @@ export const Search = () => {
   return (
     <div className="search">
       <div className="search__form">
-        <FontAwesomeIcon icon={faSearch} style={{ color: '$primary' }} />
+        <FontAwesomeIcon icon={faSearch} style={{ color: '#000' }} />
         <input
           placeholder="Search"
           className="search__input"

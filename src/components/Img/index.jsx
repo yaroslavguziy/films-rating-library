@@ -6,7 +6,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { IMG_URL } from '#constants/env.js';
 
 export const Img = ({ src, width, height, className }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const imgSrc = useMemo(() => (src ? `${IMG_URL}${src}` : ''), [src]);
 
@@ -41,8 +41,12 @@ export const Img = ({ src, width, height, className }) => {
 
 Img.propTypes = {
   className: string,
+  width: string,
+  height: string,
 };
 
 Img.defaultProps = {
   className: '',
+  width: '232px',
+  height: '300px',
 };

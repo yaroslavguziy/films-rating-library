@@ -90,8 +90,8 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  width: '232px',
-  height: '300px',
+  // width: '232px',
+  // height: '300px',
   direction: 'column',
   isShowOverview: false,
 };

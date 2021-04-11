@@ -30,13 +30,14 @@ export const Entities = () => {
     <div className="content__item" key={key}>
       <div className="content__header">
         <Link
-          className="content__title"
           to={generatePath(ROUTES.ENTITIES_CATEGORIES, {
             type,
             category,
           })}
         >
-          <h2>{formatMessage({ id: `MOVIES.${key}` })}</h2>
+          <h2 className="content__title">
+            {formatMessage({ id: `MOVIE.${key}` })}
+          </h2>
         </Link>
       </div>
       <div className="content__body">
