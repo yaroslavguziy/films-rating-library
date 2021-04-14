@@ -24,12 +24,11 @@ export const Categories = () => {
   });
 
   const entities = useMemo(
-    () =>
-      data?.pages
-        ? [...data.pages].reduce((acc, { results }) => acc.concat(results), [])
-        : [],
+    () => (data?.pages ? data.pages.flatMap(({ results }) => results) : []),
     [data?.pages]
   );
+
+  const typeKey = useMemo(() => type.toUpperCase(), [type]);
 
   return (
     <>
@@ -37,7 +36,7 @@ export const Categories = () => {
         <div className="content__header">
           <h2 className="content__title">
             {formatMessage({
-              id: `${type.toUpperCase()}.${category.toUpperCase()}`,
+              id: `${typeKey}.${category.toUpperCase()}`,
             })}
           </h2>
         </div>

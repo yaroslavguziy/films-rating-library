@@ -5,7 +5,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import { IMG_URL } from '#constants/env.js';
 
-export const Img = ({ src, width, height, className }) => {
+export const Img = ({ src, width, height }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const imgSrc = useMemo(() => (src ? `${IMG_URL}${src}` : ''), [src]);
@@ -15,21 +15,17 @@ export const Img = ({ src, width, height, className }) => {
     [isLoading]
   );
 
-  const internalClass = useMemo(() => `${className ? ' ' + className : ''}`, [
-    className,
-  ]);
-
   const handleOnLoad = () => setIsLoading(false);
 
   return (
-    <div className={`img`} width={width} height={height}>
+    <div className="img" width={width} height={height}>
       <img
         src={imgSrc}
         width={width}
         height={height}
         onLoad={handleOnLoad}
         loading="lazy"
-        className={`img__inner${loadingClass}${internalClass}`}
+        className="img__inner"
       />
       <FontAwesomeIcon
         icon={faSpinner}
@@ -40,13 +36,11 @@ export const Img = ({ src, width, height, className }) => {
 };
 
 Img.propTypes = {
-  className: string,
   width: string,
   height: string,
 };
 
 Img.defaultProps = {
-  className: '',
-  width: '232px',
+  width: '192px',
   height: '300px',
 };

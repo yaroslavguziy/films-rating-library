@@ -23,9 +23,9 @@ export const IntlProvider = ({ children }) => {
 
   return (
     <NativeIntlProvider
-      locale={EN}
-      messages={flattenMsgs[EN]}
-      defaultLocale={EN}
+      locale={RU}
+      messages={flattenMsgs[RU]}
+      defaultLocale={RU}
     >
       {children}
     </NativeIntlProvider>

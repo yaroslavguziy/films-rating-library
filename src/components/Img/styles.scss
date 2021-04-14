@@ -24,4 +24,10 @@
       display: block;
     }
   }
+
+  &__inner {
+    @media (max-width: 768px) {
+      height: 250px;
+    }
+  }
 }
