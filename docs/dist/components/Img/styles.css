@@ -24,3 +24,8 @@
 .img__loading-active {
   display: block;
 }
+@media (max-width: 768px) {
+  .img__inner {
+    height: 250px;
+  }
+}

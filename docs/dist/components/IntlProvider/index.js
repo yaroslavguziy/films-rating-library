@@ -13,9 +13,9 @@ export const IntlProvider = ({children}) => {
     return acc;
   }, {}), [messages]);
   return /* @__PURE__ */ React.createElement(NativeIntlProvider, {
-    locale: EN,
-    messages: flattenMsgs[EN],
-    defaultLocale: EN
+    locale: RU,
+    messages: flattenMsgs[RU],
+    defaultLocale: RU
   }, children);
 };
 IntlProvider.propTypes = {

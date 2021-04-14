@@ -80,7 +80,7 @@
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
   .slick-active .card {
     font-size: 12px;
   }

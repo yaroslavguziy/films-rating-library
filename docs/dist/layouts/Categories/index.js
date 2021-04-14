@@ -17,7 +17,8 @@ export const Categories = () => {
     onIntersect: fetchNextPage,
     enabled: hasNextPage
   });
-  const entities = useMemo(() => data?.pages ? [...data.pages].reduce((acc, {results}) => acc.concat(results), []) : [], [data?.pages]);
+  const entities = useMemo(() => data?.pages ? data.pages.flatMap(({results}) => results) : [], [data?.pages]);
+  const typeKey = useMemo(() => type.toUpperCase(), [type]);
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", {
     className: "content__item"
   }, /* @__PURE__ */ React.createElement("div", {
@@ -25,7 +26,7 @@ export const Categories = () => {
   }, /* @__PURE__ */ React.createElement("h2", {
     className: "content__title"
   }, formatMessage({
-    id: `${type.toUpperCase()}.${category.toUpperCase()}`
+    id: `${typeKey}.${category.toUpperCase()}`
   }))), /* @__PURE__ */ React.createElement("div", {
     className: "content__body"
   }, /* @__PURE__ */ React.createElement("div", {
